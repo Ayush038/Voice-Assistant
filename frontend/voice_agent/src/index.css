@@ -1,0 +1,47 @@
+/* =====================================================
+   GOOGLE FONT IMPORT
+===================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+/* =====================================================
+   BASE RESET
+===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* =====================================================
+   GLOBAL BODY STYLE
+===================================================== */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #050816; /* fallback if bg image fails */
+  color: white;
+}
+
+/* Optional: smoother typography look */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* =====================================================
+   IMPORT VOICE STYLES
+===================================================== */
+
+@import "./style/voice.css";

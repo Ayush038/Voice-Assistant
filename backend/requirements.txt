@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+pymongo
+openai
+livekit
+livekit-agents
+livekit-plugins-openai
+livekit-plugins-silero
