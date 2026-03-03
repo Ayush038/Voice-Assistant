@@ -24,9 +24,7 @@ export default function VoicePage() {
     try {
       setSessionState("CONNECTING");
 
-      const res = await fetch(
-        `${process.env.REACT_APP_BACKEND_URL}/token?room=${ROOM_NAME}&identity=${username}`
-      );
+      const res = await fetch(`/api/token?room=${ROOM_NAME}&identity=${username}`)
 
       if (!res.ok) throw new Error("Token generation failed");
 
@@ -108,10 +106,7 @@ export default function VoicePage() {
 
       await new Promise((resolve) => setTimeout(resolve, 600));
 
-      const res = await fetch(
-        `${process.env.REACT_APP_BACKEND_URL}/generate-summary/${ROOM_NAME}`,
-        { method: "POST" }
-      );
+      const res = await fetch(`/api/summary?room=${ROOM_NAME}`, { method: "POST" });
 
       if (!res.ok) {
         setSessionState("ERROR");
